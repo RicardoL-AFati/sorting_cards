@@ -45,11 +45,11 @@ class Deck
   ## ==========
 
   def merge_sort(direction = {reverse: false})
-    array_a, array_b, sorted = [], [], []
     return "Use another method" if @cards.length < 3
+    array_a, array_b, sorted = [], [], []
+
     until @cards.empty?
       n = @cards.length
-
       if n >= 4
         array_a, array_b = split_array(@cards, direction)
         sorted = push_or_merge_to_sorted(sorted, array_a, array_b, direction)
